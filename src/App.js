@@ -1,16 +1,16 @@
 
 import './App.css';
-// import About from './Components/About';
+import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import React, { useState } from 'react';
 import Alert from './Components/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
 // const [greenMode, setGreenMode] = useState('light');
@@ -51,24 +51,24 @@ const toggleMode=()=>{
 }
 return (
 <>
-{/* <Router> */}
+<Router>
 <div className="container" my-3="true"> 
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     
-        {/* <Switch>
+        <Switch>
           <Route exact path="/about">
             <About />
           </Route>
           
-          <Route exact path="/"> */}
+          <Route exact path="/">
           <TextForm heading="Enter the text to analyze" mode={mode} showAlert={showAlert} /> 
-          {/* </Route>
+          </Route>
         </Switch>
         
+        </div>
+</Router>
 
-</Router> */}
-</div>
 </>
 
 
