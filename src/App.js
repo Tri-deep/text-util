@@ -51,7 +51,7 @@ const toggleMode=()=>{
 }
 return (
 <>
-<Router>
+<Router basename={process.env.PUBLIC_URL}>
 <div className="container" my-3="true"> 
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
