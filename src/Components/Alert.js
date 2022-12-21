@@ -6,12 +6,12 @@ export default function Alert(props) {
         return nword.charAt(0).toUpperCase()+nword.slice(1);
   }
   return (
-     
-    props.alert && <div>
+     <div style= {{height: '65px'}}>
+    {props.alert && 
         <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
         <strong>{capitalise(props.alert.type)}</strong>: {props.alert.msg}
         <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+        </div>}
     </div>
   )
 }
